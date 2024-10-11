@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Order Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#F7F7F7] flex py-[30px] md:py-[50px] lg:py-[100px]">
+    <div class="container max-w-[940px] mx-auto p-4">
+      <h1 class="text-[20px] font-bold mb-[15px]">Food Order Form</h1>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 bg-white shadow-md rounded-[5px] overflow-hidden border border-[#ddd]"
+      >
+        <div class="col-span-1 md:col-span-2">
+          <div class="p-[30px]">
+            <form id="order-form" class="">
+              <div class="mb-[15px]">
+                <label
+                  for="food-select"
+                  class="block text-gray-700 font-bold mb-2"
+                  >Order Food:</label
+                >
+                <div id="custom-dropdown" class="relative">
+                  <div
+                    id="dropdown-button"
+                    class="block w-full bg-white border rounded p-2 text-left line-clamp-1"
+                  >
+                    Select Food
+                  </div>
+                  <div
+                    id="dropdown-menu"
+                    class="absolute w-full bg-white border rounded mt-1 overflow-y-auto max-h-[180px] hidden"
+                  >
+                    <!-- Options will be populated by JavaScript -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="">
+                <label for="quantity" class="block text-gray-700 font-bold mb-2"
+                  >Quantity:</label
+                >
+                <input
+                  type="number"
+                  min="1"
+                  value="1"
+                  name="quantity"
+                  id="quantity"
+                  class="quantity block w-full bg-white border rounded p-2 text-left"
+                />
+              </div>
+              <button
+                type="button"
+                id="add-to-cart"
+                class="bg-[#ffc7df] text-center text-[#d43378] font-bold cursor-pointer select-none py-[8px] px-[15px] rounded-[5px] mt-4"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="col-span-1 flex flex-col justify-between p-[15px] bg-[#E21B70] min-h-[350px]"
+        >
+          <div>
+            <h2 class="text-white font-bold mb-2">Your items</h2>
+            <div class="cart-list-container"></div>
+            <div class="price-total text-white mt-4 font-bold"></div>
+          </div>
+          <div
+            class="bg-[#ffc7df] text-center text-[#d43378] font-bold cursor-pointer select-none py-[8px] px-[15px] rounded-[5px] mt-[40px]"
+          >
+            <i class="fa-solid fa-credit-card"></i>
+            Checkout
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
