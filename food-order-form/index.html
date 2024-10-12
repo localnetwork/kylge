@@ -35,13 +35,14 @@
                 <div id="custom-dropdown" class="relative">
                   <div
                     id="dropdown-button"
-                    class="block w-full bg-white border rounded p-2 text-left line-clamp-1"
+                    class="flex justify-between items-center w-full bg-white border rounded p-2 text-left line-clamp-1"
                   >
                     Select Food
+                    <i class="fa-solid fa-chevron-down text-[#E21B70]"></i>
                   </div>
                   <div
                     id="dropdown-menu"
-                    class="absolute w-full bg-white border rounded mt-1 overflow-y-auto max-h-[180px] hidden"
+                    class="absolute w-full bg-white border rounded mt-1 overflow-y-auto max-h-[180px] hidden [&::-webkit-scrollbar]:[width:8px] [&::-webkit-scrollbar]:[background:#ddd] [&::-webkit-scrollbar-thumb]:[borderRadius:8px] [&::-webkit-scrollbar-thumb]:bg-[#E21B70]"
                   >
                     <!-- Options will be populated by JavaScript -->
                   </div>
