@@ -20,82 +20,129 @@
   <body class="bg-[#F7F7F7] flex py-[30px] md:py-[50px] lg:py-[100px]">
     <div class="container max-w-[940px] mx-auto p-4">
       <div
-        class="grid grid-cols-1 md:grid-cols-2 bg-white shadow-md rounded-[5px] overflow-hidden border border-[#ddd]"
+        class="grid grid-cols-1 bg-white shadow-md rounded-[5px] overflow-hidden border border-[#ddd]"
       >
         <div class="col-span-1 bg-[#333] relative">
           <img
             src="./pictures/image.jpg"
-            class="h-full w-full absolute top-0 left-0 object-cover"
+            class="h-full w-full absolute top-0 left-0 object-cover object-top"
           />
           <div
-            class="bg-black flex flex-col bg-opacity-70 text-white relative h-full w-full p-[50px]"
+            class="bg-black flex bg-opacity-70 min-h-[250px] text-white relative h-full w-full p-[30px]"
           >
             <div class="grow">
-              <h1 class="font-bold text-[50px] mb-[30px]">Save lives.</h1>
+              <h1 class="font-bold text-[50px] leading-[100%] mb-[30px]">
+                Save lives.
+              </h1>
               <p class="text-[18px] opacity-70 leading-[30px]">
                 100% of your donation goes directly to displaced families.
               </p>
             </div>
 
-            <h2 class="font-bold mb-[5px] text-[20px]">Stay in touch:</h2>
-            <div class="text-white flex flex-wrap gap-[15px] text-[30px]">
-              <a
-                href="#"
-                class="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-10"
-              >
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a
-                href="#"
-                class="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-10"
-              >
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a
-                href="#"
-                class="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-10"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="border w-[50px] h-[50px] flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-10"
-              >
-                <i class="fab fa-youtube"></i>
-              </a>
+            <div>
+              <div class="text-white flex flex-wrap gap-[15px] text-[20px]">
+                <a href="#" class="hover:mt-[-5px] transition inline-block">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="hover:mt-[-5px] transition inline-block">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="hover:mt-[-5px] transition inline-block">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:mt-[-5px] transition inline-block">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="col-span-1 flex flex-col justify-between p-[30px] bg-white min-h-[550px]"
+          class="col-span-1 flex flex-col justify-between py-[50px] px-[30px] bg-white"
         >
-          <form class="flex flex-col gap-y-[15px]" id="charity-form">
-            <div class="flex flex-col gap-[10px]">
-              <label class="font-bold" for="first_name">First Name</label>
+          <form class="grid grid-cols-3 gap-[50px]" id="charity-form">
+            <div class="flex flex-col gap-[10px] relative">
+              <label
+                for="first_name"
+                class="absolute top-[-10px] left-[15px] text-[12px] bg-white px-[10px] z-[1] rounded-[8px]"
+                >First Name*</label
+              >
               <input
                 type="text"
                 id="first_name"
                 name="first_name"
-                class="min-h-[40px] border-b-[1px] outline-none border-[#FFC7DF]"
+                class="min-h-[45px] px-[15px] border border-[2px] border-[#ddd] rounded-[20px]"
               />
+              <span id="first_name-error" class="error-message"></span>
             </div>
-            <div class="flex flex-col gap-[10px]">
-              <label class="font-bold" for="middle_name">Middle Name</label>
+            <div class="flex flex-col gap-[10px] relative">
+              <label
+                for="middle_name"
+                class="absolute top-[-10px] left-[15px] text-[12px] bg-white px-[10px] z-[1] rounded-[8px]"
+                >Middle Name</label
+              >
               <input
                 type="text"
                 id="middle_name"
                 name="middle_name"
-                class="min-h-[40px] border-b-[1px] outline-none border-[#FFC7DF]"
+                class="min-h-[45px] px-[15px] border border-[2px] border-[#ddd] rounded-[20px]"
               />
             </div>
-            <div class="flex flex-col gap-[10px]">
-              <label class="font-bold" for="last_name">Last Name</label>
+            <div class="flex flex-col gap-[10px] relative">
+              <label
+                for="last_name"
+                class="absolute top-[-10px] left-[15px] text-[12px] bg-white px-[10px] z-[1] rounded-[8px]"
+                >Last Name*</label
+              >
               <input
                 type="text"
                 id="last_name"
                 name="last_name"
-                class="min-h-[40px] border-b-[1px] outline-none border-[#FFC7DF]"
+                class="min-h-[45px] px-[15px] border border-[2px] border-[#ddd] rounded-[20px]"
               />
+              <span id="last_name-error" class="error-message"></span>
+            </div>
+
+            <div class="col-span-3 w-full gap-[30px] grid grid-cols-2">
+              <div class="flex w-full flex-col gap-[10px] relative">
+                <label
+                  for="email"
+                  class="absolute top-[-10px] left-[15px] text-[12px] bg-white px-[10px] z-[1] rounded-[8px]"
+                  >Email*</label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  class="min-h-[45px] px-[15px] border border-[2px] border-[#ddd] rounded-[20px]"
+                />
+                <span id="email-error" class="error-message"></span>
+              </div>
+              <div class="flex w-full flex-col gap-[10px] relative">
+                <label
+                  for="amount"
+                  class="absolute top-[-10px] left-[15px] text-[12px] bg-white px-[10px] z-[1] rounded-[8px]"
+                  >Amount*</label
+                >
+                <input
+                  type="number"
+                  min="1"
+                  id="amount"
+                  name="amount"
+                  class="min-h-[45px] px-[15px] border border-[2px] border-[#ddd] rounded-[20px]"
+                />
+                <span id="amount-error" class="error-message"></span>
+              </div>
+            </div>
+
+            <div class="col-span-3">
+              <button
+                type="submit"
+                class="bg-[#ffc7df] text-center text-[#d43378] font-bold cursor-pointer select-none py-[15px] px-[15px] rounded-[20px] w-full"
+              >
+                <i class="fa-solid fa-credit-card"></i>
+                Send Donation
+              </button>
             </div>
           </form>
         </div>
