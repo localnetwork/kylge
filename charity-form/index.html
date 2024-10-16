@@ -28,13 +28,15 @@
             class="h-full w-full absolute top-0 left-0 object-cover object-top"
           />
           <div
-            class="bg-black flex bg-opacity-70 min-h-[250px] text-white relative h-full w-full p-[30px]"
+            class="bg-black flex flex-col md:flex-row bg-opacity-70 min-h-[250px] text-white relative h-full w-full p-[30px]"
           >
             <div class="grow">
-              <h1 class="font-bold text-[50px] leading-[100%] mb-[30px]">
+              <h1
+                class="font-bold text-[30px] md:text-[50px] leading-[100%] mb-[30px]"
+              >
                 Save lives.
               </h1>
-              <p class="text-[18px] opacity-70 leading-[30px]">
+              <p class="text-[12px] md:text-[18px] opacity-70 leading-[30px]">
                 100% of your donation goes directly to displaced families.
               </p>
             </div>
@@ -60,7 +62,10 @@
         <div
           class="col-span-1 flex flex-col justify-between py-[50px] px-[30px] bg-white"
         >
-          <form class="grid grid-cols-3 gap-[50px]" id="charity-form">
+          <form
+            class="flex flex-col md:grid md:grid-cols-3 gap-[30px] md:gap-[50px]"
+            id="charity-form"
+          >
             <div class="flex flex-col gap-[10px] relative">
               <label
                 for="first_name"
@@ -103,7 +108,9 @@
               <span id="last_name-error" class="error-message"></span>
             </div>
 
-            <div class="col-span-3 w-full gap-[30px] grid grid-cols-2">
+            <div
+              class="col-span-3 w-full flex flex-col gap-[30px] md:grid md:grid-cols-2"
+            >
               <div class="flex w-full flex-col gap-[10px] relative">
                 <label
                   for="email"
