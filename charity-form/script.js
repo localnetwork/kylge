@@ -13,6 +13,11 @@ const validateField = (field) => {
   const value = input.value.trimStart();
   const fieldName = capitalizeFirstLetter(field.replace("_", " "));
 
+  console.log("value", value);
+
+  if (value.startsWith("")) {
+    input.value = value.trim();
+  }
   if (!value) {
     input.classList.add("error");
     errorElement.textContent = `${fieldName} is required.`;
